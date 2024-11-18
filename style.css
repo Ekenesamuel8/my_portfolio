@@ -4,18 +4,50 @@ body {
     padding: 0;
 }
 
-header {
-    background-color: #333;
+.navbar {
+    background-color: black;
     color: white;
-    padding: 1em;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
     text-align: center;
+
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
 }
 
 nav a {
     color: white;
     margin: 0 15px;
     text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
 }
+
+.nav-links li {
+    margin: 0 10px;
+  }
+
+a:hover {
+    color: red;
+  }
+
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .bar {
+    background-color: white;
+    height: 3px;
+    width: 25px;
+    margin: 3px 0;
+    transition: all 0.3s ease;
+  }
 
 section {
     padding: 2em;
@@ -27,4 +59,34 @@ section {
     margin: 1em 0;
     padding: 1em;
     border-radius: 5px;
+}
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu-toggle {
+      display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #444;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+      }
+    
+      .nav-links li {
+        margin: 10px 0;
+        text-align: center;
+    }
 }
