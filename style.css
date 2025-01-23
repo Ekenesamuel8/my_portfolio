@@ -189,9 +189,39 @@ a:hover {
   font-weight: bold;
 }
 
+/* Work Experience Label */
+.work-experience-label {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.work-experience-label span {
+  background-color: #f8f8f8;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  display: inline-block;
+  z-index: 1;
+  position: relative;
+}
+
+.work-experience-label::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #ccc;
+  z-index: 0;
+}
+
+
 .timeline {
   position: relative;
-  max-width: 900px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 20px 0;
 }
@@ -216,10 +246,7 @@ a:hover {
 
 .timeline-item .timeline-content {
   width: 40%;
-  padding: 20px;
-  background-color: #f8f8f8;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 0px;
   text-align: left;
 }
 
@@ -239,6 +266,7 @@ a:hover {
 .timeline-item .timeline-content p {
   font-size: 16px;
   line-height: 1.6;
+  margin: 0;
 }
 
 .timeline-item .timeline-icon {
@@ -460,22 +488,34 @@ a:hover {
       padding: 20px; /* Add inner padding for text */
     }
 
+    /*resume*/
+
     .timeline-item {
+      align-items: center;
       flex-direction: column;
+      margin-bottom: 30px; /* Reduced spacing between items */
     }
   
     .timeline-content {
-      width: 90%;
+      width: 100%;
       text-align: center;
       margin: 0 auto;
+      padding: 10px;
     }
-  
+    .timeline-content h3,
+    .timeline-content .company,
+    .timeline-content p {
+    text-align: left; /* Ensure all text is centered */
+  }
+
     .timeline::before {
-      left: 20px;
+      transform: translateX(-50%);
+      left: 50px;
     }
   
     .timeline-item .timeline-icon {
-      left: 20px;
+      transform: translateX(-50%);
+      left: 50px;
     }
 
    /* contact section */
