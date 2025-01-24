@@ -295,6 +295,204 @@ a:hover {
   margin-left: auto;
 }
 
+/* Services Section */
+.services {
+  background-color: #000;
+  color: #fff;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.services-title {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.service-card {
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  padding: 20px;
+  width: 300px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.icon {
+  font-size: 2em;
+  margin-bottom: 15px;
+  display: block;
+  color: #f00; /* Adjust to fit your theme */
+}
+
+.service-card h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 1em;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.learn-more {
+  font-size: 1em;
+  color: #f00;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.learn-more:hover {
+  color: #fff;
+}
+
+/* Skills Section */
+.skills-section {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.section-title {
+  font-size: 48px;
+  font-weight: bold;
+  position: relative;
+}
+
+.section-title::after {
+  content: "Skills";
+  font-size: 120px;
+  color: rgba(255, 255, 255, 0.05);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.section-subtitle {
+  margin: 10px 0 40px;
+  font-size: 16px;
+  color: #aaa;
+}
+
+/* Skills Container */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.skill {
+  width: 48%;
+  margin-bottom: 20px;
+}
+
+.skill-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.skill-percent {
+  float: right;
+  font-size: 16px;
+  color: #ff9900;
+}
+
+.skill-bar {
+  background-color: #333;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 5px;
+}
+
+.skill-progress {
+  height: 8px;
+  background-color: #ff9900;
+  border-radius: 5px;
+}
+
+/* Portfolio Section */
+.portfolio {
+  background-color: #000;
+  color: #fff;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.portfolio-title {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.1);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 0, 0, 0.7); /* Red overlay */
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.portfolio-item:hover .overlay {
+  opacity: 1;
+}
+
+.overlay h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.overlay p {
+  font-size: 1em;
+  margin: 0;
+}
+
+
 
 /* Contact Section Styling */
 .contact-section {
@@ -488,6 +686,15 @@ a:hover {
       padding: 20px; /* Add inner padding for text */
     }
 
+    .services-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .service-card {
+      width: 100%;
+    }
+
     /*resume*/
 
     .timeline-item {
@@ -518,42 +725,42 @@ a:hover {
       left: 50px;
     }
 
-   /* contact section */
-   .contact {
-    padding: 20px; /* Reduce padding for small screens */
-    text-align: center; /* Center-align content for better layout on small screens */
-  }
+    /* contact section */
+    .contact {
+      padding: 20px; /* Reduce padding for small screens */
+      text-align: center; /* Center-align content for better layout on small screens */
+    }
 
-  .contact-container {
-    flex-direction: column; /* Stack items vertically */
-    gap: 20px; /* Add spacing between sections */
-  }
+    .contact-container {
+      flex-direction: column; /* Stack items vertically */
+      gap: 20px; /* Add spacing between sections */
+    }
 
-  .contact-form,
-  .contact-info {
-    width: 100%; /* Take full width for better layout on small screens */
-    margin: 0 auto; /* Center the items */
-  }
+    .contact-form,
+    .contact-info {
+      width: 100%; /* Take full width for better layout on small screens */
+      margin: 0 auto; /* Center the items */
+    }
 
-  .contact-form textarea {
-    width: 100%; /* Ensure textarea takes full width */
-  }
+    .contact-form textarea {
+      width: 100%; /* Ensure textarea takes full width */
+    }
 
-  .contact-info {
-    text-align: center; /* Align text to the center */
-  }
+    .contact-info {
+      text-align: center; /* Align text to the center */
+    }
 
-  .contact-info div {
-    margin-bottom: 20px; /* Add spacing between each contact detail */
-  }
+    .contact-info div {
+      margin-bottom: 20px; /* Add spacing between each contact detail */
+    }
 
-  .contact-form input,
-  .contact-form textarea,
-  .contact-form button {
-    font-size: 16px; /* Adjust font size for smaller screens */
-    padding: 10px; /* Add padding for better touch targets */
-  }
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form button {
+      font-size: 16px; /* Adjust font size for smaller screens */
+      padding: 10px; /* Add padding for better touch targets */
+    }
 
-
+  
     
 }
