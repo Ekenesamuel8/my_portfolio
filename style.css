@@ -5,10 +5,9 @@ body {
 }
 
 .btn {
-  padding: 12px 25px;
+  padding: 5px 9px;
   margin: 20px 0;
-  background: red;
-  color: #1b1b1b;
+  background: #f39c12;
   font-size: 16px;
   font-weight: bold;
   text-decoration: none;
@@ -25,16 +24,21 @@ body {
   width: 100%;
   z-index: 1000;
   padding: 10px 20px;
+  background-color: #f8f8f8;
 }
 
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
+  text-transform: uppercase;
+  color: #333;
+  text-decoration: none;
 }
 
 .nav-links {
     display: flex;
     list-style: none;
+    margin-right: 20px;
 }
 
 nav a {
@@ -43,7 +47,8 @@ nav a {
     text-decoration: none;
     font-size: 1rem;
     transition: color 0.3s ease;
-}
+    text-transform: uppercase;
+  }
 
 .nav-links li {
     margin: 0 10px;
@@ -60,11 +65,12 @@ a:hover {
     background: none;
     border: none;
     font-size: 1.5rem;
+    
   }
 /*home section*/
   .home {
     height: 100vh; /*home body*/
-    padding: 50px; /**/
+    padding: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -83,9 +89,10 @@ a:hover {
     margin-bottom: 20px;
   }
 
-  .home p {
+  .home_p {
     font-size: 20px;
     margin-bottom: 30px;
+    display: block;
   }
 
   .home-sub-container {
@@ -145,6 +152,7 @@ a:hover {
 .about-details {
   flex: 1;
   line-height: 2; /* Added line spacing for better readability */
+  display: block;
 }
 
 .about-details ul {
@@ -155,7 +163,7 @@ a:hover {
 
 .download-cv {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 5px 8px;
   background: #f39c12;
   color: white;
   border-radius: 5px;
@@ -295,136 +303,6 @@ a:hover {
   margin-left: auto;
 }
 
-/* Services Section */
-.services {
-  background-color: #000;
-  color: #fff;
-  padding: 50px 20px;
-  text-align: center;
-}
-
-.services-title {
-  font-size: 2.5em;
-  margin-bottom: 30px;
-  position: relative;
-}
-
-.services-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.service-card {
-  background-color: #1a1a1a;
-  border-radius: 8px;
-  padding: 20px;
-  width: 300px;
-  text-align: left;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-}
-
-.icon {
-  font-size: 2em;
-  margin-bottom: 15px;
-  display: block;
-  color: #f00; /* Adjust to fit your theme */
-}
-
-.service-card h2 {
-  font-size: 1.5em;
-  margin-bottom: 10px;
-}
-
-.service-card p {
-  font-size: 1em;
-  line-height: 1.5;
-  margin-bottom: 20px;
-}
-
-.learn-more {
-  font-size: 1em;
-  color: #f00;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.learn-more:hover {
-  color: #fff;
-}
-
-/* Skills Section */
-.skills-section {
-  text-align: center;
-  padding: 50px 20px;
-}
-
-.section-title {
-  font-size: 48px;
-  font-weight: bold;
-  position: relative;
-}
-
-.section-title::after {
-  content: "Skills";
-  font-size: 120px;
-  color: rgba(255, 255, 255, 0.05);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: -1;
-}
-
-.section-subtitle {
-  margin: 10px 0 40px;
-  font-size: 16px;
-  color: #aaa;
-}
-
-/* Skills Container */
-.skills-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.skill {
-  width: 48%;
-  margin-bottom: 20px;
-}
-
-.skill-name {
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.skill-percent {
-  float: right;
-  font-size: 16px;
-  color: #ff9900;
-}
-
-.skill-bar {
-  background-color: #333;
-  border-radius: 5px;
-  overflow: hidden;
-  margin-top: 5px;
-}
-
-.skill-progress {
-  height: 8px;
-  background-color: #ff9900;
-  border-radius: 5px;
-}
 
 /* Portfolio Section */
 .portfolio {
@@ -621,6 +499,10 @@ a:hover {
         background-color: #999;
     }
 
+    .btn {
+      padding: 5px 9px;
+    }
+
     .nav-links.active {
         display: flex;
       }
@@ -645,7 +527,7 @@ a:hover {
     }
 
     .home-sub-container{
-      margin-top: 0px;
+      margin-top: 20px;
       margin-bottom: 0px;
       margin-left: 0px;
       position: absolute;
@@ -663,8 +545,10 @@ a:hover {
       font-size: 24px; /* Adjust the heading font size */
     }
 
-    .home, p {
+    .home_p {
       font-size: 16px; /* Adjust the paragraph font size */
+      display: block;
+  
 
     }
 
@@ -685,6 +569,7 @@ a:hover {
   
     .about-details {
       padding: 20px; /* Add inner padding for text */
+      display: block;
     }
 
     .services-container {
@@ -727,7 +612,7 @@ a:hover {
     }
 
     /* contact section */
-    .contact {
+    .contact-section {
       padding: 20px; /* Reduce padding for small screens */
       text-align: center; /* Center-align content for better layout on small screens */
     }
@@ -742,6 +627,7 @@ a:hover {
       width: 100%; /* Take full width for better layout on small screens */
       margin: 0 auto; /* Center the items */
     }
+    
 
     .contact-form textarea {
       width: 100%; /* Ensure textarea takes full width */
@@ -760,6 +646,10 @@ a:hover {
     .contact-form button {
       font-size: 16px; /* Adjust font size for smaller screens */
       padding: 10px; /* Add padding for better touch targets */
+    }
+
+    .overlay {
+      transform: none;
     }
 
   
