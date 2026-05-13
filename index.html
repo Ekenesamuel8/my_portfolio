@@ -3,204 +3,306 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <meta
+        name="description"
+        content="Ekene Chikwendu is a full-stack developer building scalable web applications, product experiences, and AI-powered solutions."
+    >
+    <title>Ekene Chikwendu | Full-Stack Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+        rel="stylesheet"
+    >
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
 <body>
+    <!-- Decorative background orbs for a more atmospheric landing page. -->
+    <div class="page-glow page-glow-one" aria-hidden="true"></div>
+    <div class="page-glow page-glow-two" aria-hidden="true"></div>
+
     <nav class="navbar">
         <div class="logo">
-          <a href="#home">My Portfolio</a>
+            <a href="#home">Ekene</a>
         </div>
-        <div class="menu-toggle" id="mobile-menu">
-          <i class="fas fa-bars"></i>
-        </div>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#resume">Resume</a></li>
-          <li><a href="#project">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+        <button class="menu-toggle" id="mobile-menu" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-links">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#project">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
-      </nav>
-    <section class="home">
-      <div class="home-container">
-        <div class="home-sub-container">
-          <span class="greeting">Hello!</span>
-          <h1>I'm Ekene Chikwendu</h1>
-          <p class="home_p">
-            a passionate Full-Stack Developer dedicated to building efficient and scalable web solution
-          </p>
-          <a href="https://drive.google.com/file/d/1YCDwYN1nNLiJOT-eKE_NStKDOpDS5TEK/view?usp=sharing" class="btn">Download CV</a>
-          <div class="home-socialicon">
-            <a href="www.linkedin.com/in/ekene-chikwendu"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/Ekenesamuel8"><i class="fab fa-github"></i></a>
-            <a href="https://x.com/EkeneChikwendu?t=Lfs4xqmL_Wo4Hm3B3NB-rQ&s=09"><i class="fab fa-twitter"></i></a>
-          </div>
-        </div>
-        <div class="home-image">
-          <img src="images/homeimg.png" alt="ekene">
-        </div>
-      </div>
-    </section>
-    
-    <div id="about" class="about">
-      <div class="about-container">
-        <div class="about-image">
-          <img src="images/EK.jpg" alt="Profile Image">
-        </div>
-        <div class="about-details">
-          <h2>About Me</h2>
-          <p>Ekene is a Software Engineer specializing in full-stack development, system programming, and AI solutions.
-            Proficient in Python, JavaScript, C, and Shell Scripting, with experience in Flask, Django, Next.js, and database management (MySQL, MongoDB). 
-            Passionate about problem-solving and building impactful applications.
-          </p>
-          <ul>
-            <li><i class="fas fa-map-marker-alt"></i> Lagos Nigeria </li>
-          </ul>
-          <div class="home-socialicon">
-            <a href="www.linkedin.com/in/ekene-chikwendu"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/Ekenesamuel8"><i class="fab fa-github"></i></a>
-            <a href="https://x.com/EkeneChikwendu?t=Lfs4xqmL_Wo4Hm3B3NB-rQ&s=09"><i class="fab fa-twitter"></i></a>
-          </div>
-          <a href="https://drive.google.com/file/d/1YCDwYN1nNLiJOT-eKE_NStKDOpDS5TEK/view?usp=sharing" class="download-cv">Download CV</a>
-        </div>
-      </div>
-    </div>   
-    
-    <section id="resume" class="resume-section">
-      <h2 class="section-title">My Resume</h2>
-      <div class="work-experience-label">
-        <span>Work Experience</span>
-      </div>
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-content left">
-            <h3>Frontend web developer</h3>
-            <span class="company">Build Network - oct - nov 2024</span>
-            <p> work as a student </p>
-          </div>
-          <div class="timeline-icon">
-            <i class="fas fa-briefcase"></i>
-          </div>
-        </div>
-    
-        <div class="timeline-item">
-          <div class="timeline-content right">
-            <h3>Software Engineer</h3>
-            <span class="company">ALX Africa - 2023 - 2024</span>
-            <p>work as a student</p>
-          </div>
-          <div class="timeline-icon">
-            <i class="fas fa-briefcase"></i>
-          </div>
-        </div>
-      </div>
-      <div class="work-experience-label">
-        <span>EDUCATION</span>
-      </div>
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-content left">
-            <h3>Software Engineer</h3>
-            <span class="company">ALX Africa - 2023 - 2024</span>
-            <p></p>
-          </div>
-          <div class="timeline-icon">
-            <i class="fas fa-briefcase"></i>
-          </div>
-        </div>
-    
-        <div class="timeline-item">
-          <div class="timeline-content right">
-            <h3>Bs.c Marketing</h3>
-            <span class="company">Nnamdi Azikiwe University - 2017 - 2021</span>
-          </div>
-          <div class="timeline-icon">
-            <i class="fas fa-book"></i>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-content left">
-            <h3> SSCE </h3>
-            <span class="company">Festlad collage - 2013 - 2016</span>
-          </div>
-          <div class="timeline-icon">
-            <i class="fas fa-briefcase"></i>
-          </div>
-        </div>
-      </div>
-    </section>
-  
-    
-    <section id="project" class="portfolio">
-      <h1 class="portfolio-title">PORTFOLIO</h1>
-      <div class="portfolio-grid">
-        <div class="portfolio-item">
-          <a href="https://smartfin-eight.vercel.app/">
-            <img src="images/smarfinlogo.png" alt="Project 3">
-            <div class="overlay">
-              <h3>Smartfin</h3>
-              <p>Smartfin is a financial management app that helps users track their expenses and income.</p>
+    </nav>
+
+    <main>
+        <!-- Hero section introduces Ekene and anchors the first-scroll experience. -->
+        <section id="home" class="home">
+            <div class="home-container">
+                <div class="home-sub-container reveal">
+                    <span class="section-chip">Full-Stack Developer</span>
+                    <h1>Building thoughtful products with code, systems, and AI.</h1>
+                    <p class="home_p">
+                        I design and develop web experiences that feel sharp, load fast, and scale with real user needs.
+                    </p>
+                    <div class="hero-actions">
+                        <a
+                            href="https://drive.google.com/file/d/1YCDwYN1nNLiJOT-eKE_NStKDOpDS5TEK/view?usp=sharing"
+                            class="btn"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Download CV
+                        </a>
+                        <a href="#project" class="btn btn-secondary">View Projects</a>
+                    </div>
+                    <div class="home-socialicon" aria-label="Social links">
+                        <a href="https://www.linkedin.com/in/ekene-chikwendu" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/Ekenesamuel8" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://x.com/EkeneChikwendu?t=Lfs4xqmL_Wo4Hm3B3NB-rQ&s=09" target="_blank" rel="noopener noreferrer" aria-label="X">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                    <div class="hero-metrics">
+                        <article>
+                            <strong>3+</strong>
+                            <span>Production-ready projects</span>
+                        </article>
+                        <article>
+                            <strong>4</strong>
+                            <span>Core stacks across frontend and backend</span>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Hero visual uses the portrait image with layered accent cards for a more premium look. -->
+                <div class="home-image reveal reveal-delay">
+                    <div class="image-card">
+                        <img src="images/EK.jpg" alt="Portrait of Ekene Chikwendu">
+                        <div class="image-card-badge">
+                            <span>Currently focused on</span>
+                            <strong>Scalable web apps and AI tooling</strong>
+                        </div>
+                        <div class="image-card-accent">
+                            <span>Design + Engineering</span>
+                            <strong>Thoughtful interfaces, solid systems</strong>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </a>
-        </div>
-        <div class="portfolio-item">
-          <a href="https://youtu.be/orNHS4bMFiU">
-            <img src="images/buildnetwork.png" alt="Project 4">
-            <div class="overlay">
-              <h3>Build Network</h3>
-              <p>Build Network is a business that offer architectural and engineering services.</p>
+        </section>
+
+        <!-- About section gives a concise bio plus the core tools Ekene uses. -->
+        <section id="about" class="about">
+            <div class="about-container reveal">
+                <div class="about-image">
+                    <img src="images/EK.jpg" alt="Profile image of Ekene Chikwendu">
+                </div>
+                <div class="about-details">
+                    <span class="section-chip">About Me</span>
+                    <h2>Engineering with clarity, curiosity, and user impact.</h2>
+                    <p>
+                        Ekene is a Software Engineer specializing in full-stack development, system programming, and AI solutions.
+                        He works across Python, JavaScript, C, and Shell Scripting, with hands-on experience in Flask, Django,
+                        Next.js, MySQL, and MongoDB.
+                    </p>
+                    <p>
+                        He enjoys solving hard problems, improving product usability, and turning rough ideas into reliable digital tools.
+                    </p>
+                    <ul class="about-meta">
+                        <li><i class="fas fa-map-marker-alt"></i> Lagos, Nigeria</li>
+                        <li><i class="fas fa-code"></i> Full-stack, backend systems, and AI workflows</li>
+                    </ul>
+                    <div class="skill-pills" aria-label="Core skills">
+                        <span>Python</span>
+                        <span>JavaScript</span>
+                        <span>Flask</span>
+                        <span>Django</span>
+                        <span>Next.js</span>
+                        <span>MySQL</span>
+                        <span>MongoDB</span>
+                    </div>
+                    <div class="home-socialicon" aria-label="Social links">
+                        <a href="https://www.linkedin.com/in/ekene-chikwendu" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/Ekenesamuel8" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://x.com/EkeneChikwendu?t=Lfs4xqmL_Wo4Hm3B3NB-rQ&s=09" target="_blank" rel="noopener noreferrer" aria-label="X">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
-          </a>
-        </div>
-        <div class="portfolio-item">
-          <a href="https://peace-mind-connect-app.onrender.com/">
-            <img src="images/peacemindlogo.jpg" alt="Project 5">
-            <div class="overlay">
-              <h3>Peace Mind Connect</h3>
-              <p>Peace Mind Connect is a mental health app that connects users with mental health professionals.</p>
+        </section>
+
+        <!-- Resume uses a cleaner content structure so the timeline reads better. -->
+        <section id="resume" class="resume-section">
+            <div class="section-heading reveal">
+                <span class="section-chip">Resume</span>
+                <h2 class="section-title">Experience and education that shaped my work.</h2>
             </div>
-          </a>
-        </div>
-      </div>
-    </section>
-    
-    
-    <section id="contact" class="contact-section">
-      <!-- Contact Section Container -->
-      <div class="contact-container">
-        <!-- Left Side: Contact Information -->
-        <div class="contact-info">
-          <h2>Contact Me</h2>
-          <p>
-            <i class="fas fa-paper-plane"></i> chikwenduekene8@gmail.com
-          </p>
-          <p>
-            <i class="fas fa-phone-alt"></i> +2348100384325
-          </p>
-          <div class="social-icons">
-            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-            <a href="https://x.com/EkeneChikwendu?t=Lfs4xqmL_Wo4Hm3B3NB-rQ&s=09" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="www.linkedin.com/in/ekene-chikwendu" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-          </div>
-        </div>
-    
-        <!-- Right Side: Contact Form -->
-        <div class="contact-form">
-          <!-- Input Fields for Name, Email, and Message -->
-          <form action="#" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <!-- Submit Button -->
-            <button type="submit" class="btn">Send Message</button>
-          </form>
-        </div>
-      </div>
-    </section>
-    
-    
+
+            <div class="resume-group reveal">
+                <div class="work-experience-label">
+                    <span>Work Experience</span>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content left">
+                            <h3>Frontend Web Developer</h3>
+                            <span class="company">Build Network | October 2024 - November 2024</span>
+                            <p>Contributed as a student developer while strengthening frontend implementation and delivery skills.</p>
+                        </div>
+                        <div class="timeline-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-content right">
+                            <h3>Software Engineer</h3>
+                            <span class="company">ALX Africa | 2023 - 2024</span>
+                            <p>Built foundation across software engineering, teamwork, and practical project delivery.</p>
+                        </div>
+                        <div class="timeline-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="resume-group reveal">
+                <div class="work-experience-label">
+                    <span>Education</span>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content left">
+                            <h3>Software Engineering</h3>
+                            <span class="company">ALX Africa | 2023 - 2024</span>
+                            <p>Completed project-based software engineering training focused on real-world development practices.</p>
+                        </div>
+                        <div class="timeline-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-content right">
+                            <h3>B.Sc. Marketing</h3>
+                            <span class="company">Nnamdi Azikiwe University | 2017 - 2021</span>
+                            <p>Developed communication, research, and product-thinking skills that now strengthen technical work.</p>
+                        </div>
+                        <div class="timeline-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-content left">
+                            <h3>SSCE</h3>
+                            <span class="company">Festlad College | 2013 - 2016</span>
+                            <p>Built the academic foundation that led into software and product development.</p>
+                        </div>
+                        <div class="timeline-icon">
+                            <i class="fas fa-school"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project cards now include clearer copy and a stronger visual hierarchy. -->
+        <section id="project" class="portfolio">
+            <div class="section-heading reveal">
+                <span class="section-chip">Selected Work</span>
+                <h2 class="section-title">A few products I have designed, built, or helped shape.</h2>
+            </div>
+            <div class="portfolio-grid">
+                <article class="portfolio-item reveal">
+                    <a href="https://smartfin-eight.vercel.app/" target="_blank" rel="noopener noreferrer">
+                        <img src="images/smarfinlogo.png" alt="Smartfin project preview">
+                        <div class="overlay">
+                            <span class="project-tag">Finance</span>
+                            <h3>Smartfin</h3>
+                            <p>Expense and income tracking experience designed to make personal finance feel simpler.</p>
+                        </div>
+                    </a>
+                </article>
+                <article class="portfolio-item reveal reveal-delay">
+                    <a href="https://youtu.be/orNHS4bMFiU" target="_blank" rel="noopener noreferrer">
+                        <img src="images/buildnetwork.png" alt="Build Network project preview">
+                        <div class="overlay">
+                            <span class="project-tag">Business</span>
+                            <h3>Build Network</h3>
+                            <p>Digital presence for a business offering architecture and engineering services.</p>
+                        </div>
+                    </a>
+                </article>
+                <article class="portfolio-item reveal reveal-delay-2">
+                    <a href="https://peace-mind-connect-app.onrender.com/" target="_blank" rel="noopener noreferrer">
+                        <img src="images/peacemindlogo.jpg" alt="Peace Mind Connect project preview">
+                        <div class="overlay">
+                            <span class="project-tag">Health</span>
+                            <h3>Peace Mind Connect</h3>
+                            <p>Mental health platform that connects users with support and professional guidance.</p>
+                        </div>
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <!-- Contact section keeps the form simple and uses JS to prepare an email draft. -->
+        <section id="contact" class="contact-section">
+            <div class="contact-container reveal">
+                <div class="contact-info">
+                    <span class="section-chip">Contact</span>
+                    <h2>Let&apos;s build something useful together.</h2>
+                    <p>
+                        <i class="fas fa-paper-plane"></i>
+                        <a href="mailto:chikwenduekene8@gmail.com">chikwenduekene8@gmail.com</a>
+                    </p>
+                    <p>
+                        <i class="fas fa-phone-alt"></i>
+                        <a href="tel:+2348100384325">+234 810 038 4325</a>
+                    </p>
+                    <p class="contact-copy">
+                        Whether you need a developer for a product build, a collaboration partner, or a fresh set of eyes on an idea, I&apos;m open to the conversation.
+                    </p>
+                    <div class="social-icons">
+                        <a href="https://github.com/Ekenesamuel8" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://x.com/EkeneChikwendu?t=Lfs4xqmL_Wo4Hm3B3NB-rQ&s=09" target="_blank" rel="noopener noreferrer" aria-label="X">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/ekene-chikwendu" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <form id="contact-form">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="message" placeholder="Tell me a little about your project" required></textarea>
+                        <button type="submit" class="btn">Start the Conversation</button>
+                        <p class="form-note" id="form-note" aria-live="polite"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <script src="style.js"></script>
 </body>
 </html>

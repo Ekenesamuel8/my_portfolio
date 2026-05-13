@@ -1,51 +1,103 @@
-// Create a scroll-to-top button
-const backToTopButton = document.createElement('button');
-backToTopButton.innerText = 'Top';
+// Mobile menu toggle keeps navigation usable on smaller screens.
+const mobileMenu = document.getElementById("mobile-menu");
+const navLinks = document.getElementById("nav-links");
+
+if (mobileMenu && navLinks) {
+  mobileMenu.addEventListener("click", () => {
+    const isExpanded = mobileMenu.getAttribute("aria-expanded") === "true";
+    mobileMenu.setAttribute("aria-expanded", String(!isExpanded));
+    navLinks.classList.toggle("active");
+  });
+
+  navLinks.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("active");
+      mobileMenu.setAttribute("aria-expanded", "false");
+    });
+  });
+
+  // Close the mobile navigation when the user taps outside the navbar area.
+  document.addEventListener("click", (event) => {
+    const clickedInsideNav =
+      event.target instanceof Node &&
+      (mobileMenu.contains(event.target) || navLinks.contains(event.target));
+
+    if (!clickedInsideNav) {
+      navLinks.classList.remove("active");
+      mobileMenu.setAttribute("aria-expanded", "false");
+    }
+  });
+}
+
+// Back-to-top button is created in JS so the HTML stays focused on page content.
+const backToTopButton = document.createElement("button");
+backToTopButton.className = "back-to-top";
+backToTopButton.type = "button";
+backToTopButton.setAttribute("aria-label", "Back to top");
+backToTopButton.innerHTML = '<i class="fas fa-arrow-up"></i>';
 document.body.appendChild(backToTopButton);
 
-backToTopButton.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+backToTopButton.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-
-const mobileMenu = document.getElementById('mobile-menu');
-const navLinks = document.querySelector('.nav-links');
-
-mobileMenu.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
+window.addEventListener("scroll", () => {
+  backToTopButton.classList.toggle("is-visible", window.scrollY > 420);
 });
 
-// Tab functionality
-document.querySelectorAll(".tab-button").forEach((button) => {
-  button.addEventListener("click", (e) => {
-    const tab = e.target.dataset.tab;
+// IntersectionObserver drives the scroll reveal animation for major sections.
+const revealItems = document.querySelectorAll(".reveal");
 
-    // Remove active class from all buttons
-    document.querySelectorAll(".tab-button").forEach((btn) => {
-      btn.classList.remove("active");
-    });
+if ("IntersectionObserver" in window) {
+  const revealObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          return;
+        }
 
-    // Add active class to the clicked button
-    e.target.classList.add("active");
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.18 }
+  );
 
-    // Hide all tab contents
-    document.querySelectorAll(".tab-content").forEach((content) => {
-      content.classList.remove("active");
-    });
+  revealItems.forEach((item) => revealObserver.observe(item));
+} else {
+  revealItems.forEach((item) => item.classList.add("is-visible"));
+}
 
-    // Show the corresponding tab content
-    document.getElementById(tab).classList.add("active");
+// The contact form drafts an email in the visitor's mail app instead of posting nowhere.
+const contactForm = document.getElementById("contact-form");
+const formNote = document.getElementById("form-note");
+
+if (contactForm) {
+  contactForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(contactForm);
+    const name = String(formData.get("name") || "").trim();
+    const email = String(formData.get("email") || "").trim();
+    const message = String(formData.get("message") || "").trim();
+
+    if (!name || !email || !message) {
+      if (formNote) {
+        formNote.textContent = "Please complete your name, email, and message.";
+      }
+      return;
+    }
+
+    const subject = encodeURIComponent(`Portfolio inquiry from ${name}`);
+    const body = encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\n\nProject details:\n${message}`
+    );
+
+    if (formNote) {
+      formNote.textContent = "Opening your email app so you can send the message.";
+    }
+
+    window.location.href = `mailto:chikwenduekene8@gmail.com?subject=${subject}&body=${body}`;
+    contactForm.reset();
   });
-});
-
-// Basic form validation
-document.querySelector("form").addEventListener("submit", function (e) {
-  const name = document.querySelector("input[name='name']").value;
-  const email = document.querySelector("input[name='email']").value;
-  const message = document.querySelector("textarea[name='message']").value;
-
-  if (!name || !email || !message) {
-    e.preventDefault(); // Stop form submission
-    alert("All fields are required!");
-  }
-});
+}
